@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a5832bb-1f2e-49e0-b555-9cee2e37302f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aerochart.js" afterPath="$PROJECT_DIR$/aerochart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
@@ -31,11 +32,11 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="495">
-                <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <first_editor relative-caret-position="297">
+                <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
                 <folding>
-                  <marker date="1473301156135" expanded="true" signature="432:547" ph="..." />
-                  <marker date="1473301156135" expanded="true" signature="608:691" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
+                  <marker date="1473317072409" expanded="true" signature="494:499" ph="..." />
+                  <marker date="1473317072409" expanded="true" signature="546:629" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -43,29 +44,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+            <state relative-caret-position="-539">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aerochart.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="aerochart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aerochart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+            <state relative-caret-position="431">
+              <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
               <folding>
                 <element signature="e#121#232#0" expanded="false" />
                 <element signature="e#262#815#0" expanded="false" />
-                <element signature="e#3239#5223#0" expanded="false" />
-                <element signature="e#5372#5837#0" expanded="false" />
-                <element signature="e#5968#6028#0" expanded="false" />
+                <element signature="e#1926#2520#0" expanded="false" />
+                <element signature="e#2561#2888#0" expanded="false" />
+                <element signature="e#2920#5101#0" expanded="false" />
+                <element signature="e#5249#6727#0" expanded="false" />
+                <element signature="e#6858#6918#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -87,8 +90,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/aerochart.js" />
         <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/aerochart.js" />
       </list>
     </option>
   </component>
@@ -130,7 +133,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,10 +153,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -230,12 +233,13 @@
       <option name="presentableId" value="Default" />
       <updated>1473241955928</updated>
       <workItem from="1473241957758" duration="6711000" />
-      <workItem from="1473296934187" duration="4649000" />
+      <workItem from="1473296934187" duration="5244000" />
+      <workItem from="1473313677493" duration="4378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11360000" />
+    <option name="totallyTimeSpent" value="16333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -275,12 +279,52 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="825">
+            <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <folding>
+              <marker date="1473317072409" expanded="true" signature="494:499" ph="..." />
+              <marker date="1473317072409" expanded="true" signature="546:629" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aerochart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+          <folding>
+            <element signature="e#121#232#0" expanded="false" />
+            <element signature="e#262#815#0" expanded="false" />
+            <element signature="e#1926#2520#0" expanded="false" />
+            <element signature="e#2561#2888#0" expanded="false" />
+            <element signature="e#2920#5101#0" expanded="false" />
+            <element signature="e#5249#6727#0" expanded="false" />
+            <element signature="e#6858#6918#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="27" selection-end-column="63" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -291,8 +335,8 @@
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding>
-              <marker date="1473301156135" expanded="true" signature="432:547" ph="..." />
-              <marker date="1473301156135" expanded="true" signature="608:691" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
+              <marker date="1473317072409" expanded="true" signature="494:499" ph="..." />
+              <marker date="1473317072409" expanded="true" signature="546:629" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -306,9 +350,11 @@
           <folding>
             <element signature="e#121#232#0" expanded="false" />
             <element signature="e#262#815#0" expanded="false" />
-            <element signature="e#3239#5223#0" expanded="false" />
-            <element signature="e#5372#5837#0" expanded="false" />
-            <element signature="e#5968#6028#0" expanded="false" />
+            <element signature="e#1926#2520#0" expanded="false" />
+            <element signature="e#2561#2888#0" expanded="false" />
+            <element signature="e#2920#5101#0" expanded="false" />
+            <element signature="e#5249#6727#0" expanded="false" />
+            <element signature="e#6858#6918#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -324,37 +370,39 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="495">
-            <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <first_editor relative-caret-position="297">
+            <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
             <folding>
-              <marker date="1473301156135" expanded="true" signature="432:547" ph="..." />
-              <marker date="1473301156135" expanded="true" signature="608:691" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
+              <marker date="1473317072409" expanded="true" signature="494:499" ph="..." />
+              <marker date="1473317072409" expanded="true" signature="546:629" ph="{&quot;text_format&quot;: '$per%,剩$rem工时'...}" />
             </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aerochart.js">
+    <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+        <state relative-caret-position="-539">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
-            <element signature="e#121#232#0" expanded="false" />
-            <element signature="e#262#815#0" expanded="false" />
-            <element signature="e#3239#5223#0" expanded="false" />
-            <element signature="e#5372#5837#0" expanded="false" />
-            <element signature="e#5968#6028#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html">
+    <entry file="file://$PROJECT_DIR$/aerochart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+        <state relative-caret-position="431">
+          <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#121#232#0" expanded="false" />
+            <element signature="e#262#815#0" expanded="false" />
+            <element signature="e#1926#2520#0" expanded="false" />
+            <element signature="e#2561#2888#0" expanded="false" />
+            <element signature="e#2920#5101#0" expanded="false" />
+            <element signature="e#5249#6727#0" expanded="false" />
+            <element signature="e#6858#6918#0" expanded="false" />
           </folding>
         </state>
       </provider>

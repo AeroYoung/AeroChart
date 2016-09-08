@@ -10,55 +10,25 @@
 
     <link rel="stylesheet" href="http://lib.sinaapp.com/js/bootstrap/latest/css/bootstrap.min.css">
     <style type="text/css">
-        .progress{
+        html,body{width:100%!important;}
+        .aero-bar{
             margin-top: 20px;
             height: 30px;
             vertical-align: center;
-            text-align: center;
-            text-align-all: center;
+            text-align: left;
             font-size: 18px;
         }
-        .progress-bar{font-size: 18px;}
     </style>
     <script src="../../7_Web/EC_BHRT/assets/js/bootstrap-progressbar.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="width:100%!important;max-width: none!important;">
         <div class="row">
             <div class="col-md-4">
 
             </div>
             <div class="col-md-8">
-                <div class="progress" >
-                    <div class="progress-bar" data_c="10" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="20" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="30" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="40" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="50" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="60" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="70" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="80" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="90" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
-                <div class="progress" >
-                    <div class="progress-bar" data_c="100" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-                </div>
+                <div class="aero-bar" data_c="70" aria-valuemin="0" aria-valuemax="100">分流板，共700min</div>
             </div>
         </div>
     </div>
@@ -67,9 +37,15 @@
     <script type="text/javascript" src="aerochart.js"></script>
     <script type="text/javascript" >
         $(document).ready(function () {
-            $('.progress .progress-bar').progressbar({
-                text_format:'$per%,剩$rem工时',
-                display_text:'center'
+            /*$('.progress .progress-bar').progressbar({
+                text_format:'$per%',
+                display_text:'left',
+                auto_theme:false
+            });*/
+            $('.aero-bar').progressbar({
+                text_format:'$per%',
+                display_text:'left',
+                auto_theme:false
             });
         });
     </script>

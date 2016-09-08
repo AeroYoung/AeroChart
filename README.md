@@ -18,12 +18,10 @@
 ## Usage
 ###progressbar
 ```html
-<div class="progress" >
-    <div class="progress-bar" data_c="40" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
-</div>
+<div class="aero-bar" data_c="70" aria-valuemin="0" aria-valuemax="100">分流板，共700min</div>
 ```
 ```javascript
-$('.progress .progress-bar').progressbar({
+$('.aero-bar').progressbar({
     auto_theme:true,
     text_format:'$per%,剩$rem工时',
     display_text:'center'
