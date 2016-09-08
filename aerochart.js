@@ -41,7 +41,8 @@
         var update = options.update && typeof options.update === 'function' ? options.update : Progressbar.defaults.update;
         var done = options.done && typeof options.done === 'function' ? options.done : Progressbar.defaults.done;
         var fail = options.fail && typeof options.fail === 'function' ? options.fail : Progressbar.defaults.fail;
-        var height = this.height;
+        var height = $this.height;
+        var fontSize = $this.css("font-size");
 
         $this.css('min-width','20px');
 
@@ -51,6 +52,13 @@
         if (options.display_text === 'center' && !$back_text && !$front_text) {
             this.$back_text = $back_text = $('<span>').addClass('progressbar-back-text').prependTo($parent);
             this.$front_text = $front_text = $('<span>').addClass('progressbar-front-text').prependTo($this);
+
+            $back_text.css("vertical-align","center");
+            $front_text.css("vertical-align","center");
+            $back_text.css("text-align","center");
+            $front_text.css("text-align","center");
+            $back_text.css("font-size",fontSize);
+            $front_text.css("font-size",fontSize);
 
             var parent_size;
 
@@ -99,8 +107,13 @@
                         $this.text(text);
                     }
                     else if (options.display_text === 'center') {
-                        $back_text.text(text);
-                        $front_text.text(text);
+                        if(current_percentage<50){
+                            $back_text.text(text);
+                            $front_text.text("");
+                        }else{
+                            $front_text.text(text);
+                            $back_text.text("");
+                        }
                     }
                 }
                 $this.attr('aria-valuenow', current_value);
