@@ -25,7 +25,7 @@
     <div class="container" style="width:100%!important;max-width: none!important;">
         <div class="row">
             <div class="col-md-4">
-
+                <div id="main" style="width: 600px;height:400px;"></div>
             </div>
             <div class="col-md-8">
                 <div class="aero-bar" data_c="70" aria-valuemin="0" aria-valuemax="100">分流板，共700min</div>
@@ -34,20 +34,33 @@
     </div>
 
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="aerochart.js"></script>
+    <script type="text/javascript" src="AeroChart.js"></script>
+    <script type="text/javascript" src="echarts.min.js"></script>
     <script type="text/javascript" >
         $(document).ready(function () {
-            /*$('.progress .progress-bar').progressbar({
-                text_format:'$per%',
-                display_text:'left',
-                auto_theme:false
-            });*/
             $('.aero-bar').progressbar({
                 text_format:'$per%',
                 display_text:'left',
                 auto_theme:false
             });
+            var myChart = echarts.init(document.getElementById('main'));
+            option = {
+                tooltip : {
+                    formatter: "{a} <br/>{b} : {c}%"
+                },
+                series: [
+                    {
+                        name: '完成率',
+                        type: 'gauge',
+                        detail: {formatter:'{value}%'},
+                        data: [{value: 50, name: 'MH1001'}]
+                    }
+                ]
+            };
+            myChart.setOption(option, true);
+
         });
+
     </script>
 </body>
 </html>
