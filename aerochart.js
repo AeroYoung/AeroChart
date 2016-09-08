@@ -13,9 +13,6 @@
         transition_delay: 300,
         refresh_speed: 50,
         display_text: 'fill',
-        max_value:100,
-        min_value:0,
-        current_value:80,
         text_format:'$now/$max',
             /*进度条显示文本 通配符替换规则
             * $now: 当前值
@@ -25,6 +22,7 @@
             * */
         percent_format: function(percent) { return percent + '%'; },
         amount_format: function(amount_part, amount_max, amount_min) { return amount_part + ' / ' + amount_max; },
+        auto_theme:true,
         update: $.noop,
         done: $.noop,
         fail: $.noop
@@ -36,29 +34,27 @@
         var $back_text = this.$back_text;
         var $front_text = this.$front_text;
         var options = this.options;
-        var aria_valuemin = parseInt($this.attr('aria-valuemin')) || 0;
-        var aria_valuemax = parseInt($this.attr('aria-valuemax')) || 100;
+        var data_transitiongoal = parseFloat($this.attr('data_c')) || 100 ;
+        var aria_valuemin = parseFloat($this.attr('aria-valuemin')) || 0;
+        var aria_valuemax = parseFloat($this.attr('aria-valuemax')) || 100;
         var update = options.update && typeof options.update === 'function' ? options.update : Progressbar.defaults.update;
         var done = options.done && typeof options.done === 'function' ? options.done : Progressbar.defaults.done;
         var fail = options.fail && typeof options.fail === 'function' ? options.fail : Progressbar.defaults.fail;
-        var height = $this.height;
         var fontSize = $this.css("font-size");
 
         $this.css('min-width','20px');
 
-        //百分比 100 * (data_transitiongoal - aria_valuemin) / (aria_valuemax - aria_valuemin)
-        var percentage = Math.round(100 * (options.current_value - options.min_value) / (options.max_value - options.min_value));
-
+        var percentage = Math.round(100 * (data_transitiongoal - aria_valuemin) / (aria_valuemax - aria_valuemin));
         if (options.display_text === 'center' && !$back_text && !$front_text) {
             this.$back_text = $back_text = $('<span>').addClass('progressbar-back-text').prependTo($parent);
             this.$front_text = $front_text = $('<span>').addClass('progressbar-front-text').prependTo($this);
 
-            $back_text.css("vertical-align","center");
+            /*$back_text.css("vertical-align","center");
             $front_text.css("vertical-align","center");
             $back_text.css("text-align","center");
             $front_text.css("text-align","center");
             $back_text.css("font-size",fontSize);
-            $front_text.css("font-size",fontSize);
+            $front_text.css("font-size",fontSize);*/
 
             var parent_size;
 
@@ -69,6 +65,13 @@
                 parent_size = $parent.css('width');
                 $front_text.css({width: parent_size});
             }); // normal resizing would brick the structure because width is in px
+        }
+
+        if(options.auto_theme === true){
+            if(percentage==100) $this.addClass("progress-bar-success");
+            else if(percentage<100 && percentage >= 70) $this.addClass("progress-bar-info");
+            else if(percentage<70 && percentage >= 35) $this.addClass("progress-bar-warning");
+            else $this.addClass("progress-bar-danger");
         }
 
         setTimeout(function() {
@@ -85,11 +88,11 @@
                 parent_size = $parent.width();
 
                 current_percentage = Math.round(100 * this_size / parent_size);
-                current_value = Math.round(options.min_value + this_size / parent_size * (options.max_value - options.min_value));
+                current_value = Math.round(aria_valuemin + this_size / parent_size * (aria_valuemax - aria_valuemin));
 
                 if (current_percentage >= percentage) {
                     current_percentage = percentage;
-                    current_value = options.current_value;
+                    current_value = data_transitiongoal;
                     done($this);
                     clearInterval(progress);
                 }
@@ -98,10 +101,10 @@
                     text = options.text_format;
                     //importent 修改content
                     text = text.replace("$now",current_value);
-                    text = text.replace("$max",options.max_value);
-                    text = text.replace("$min",options.min_value);
+                    text = text.replace("$max",aria_valuemax);
+                    text = text.replace("$min",aria_valuemin);
                     text = text.replace("$per",current_percentage);
-                    text = text.replace("$rem",options.max_value-current_value);
+                    text = text.replace("$rem",aria_valuemax-current_value);
 
                     if (options.display_text === 'fill') {
                         $this.text(text);

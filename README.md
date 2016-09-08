@@ -12,22 +12,27 @@
 
 
 ## Overview
-* pregressbar:进度条上可以自定义文本内容，进度值也全部放在了js代码里面，文字高度和位置自适应。
+* pregressbar:进度条上可以自定义文本内容，文字高度和位置自适应。可以根据数值自动改变进度条主题。
 
 
 ## Usage
 ###progressbar
+```html
+<div class="progress" >
+    <div class="progress-bar" data_c="40" aria-valuemin="0" aria-valuemax="100" role="progressbar" ></div>
+</div>
+```
 ```javascript
 $('.progress .progress-bar').progressbar({
-    current_value:30,
-    max_value:100,
-    min_value:0,
+    auto_theme:true,
     text_format:'$per%,剩$rem工时',
     display_text:'center'
 });
 ```
-别的options不需要多说明了。主要是进度条内容text_format，使用通配符替换：
+**text_format**:使用通配符替换：
 * $now: 当前值
 * $max,$min:最大最小值
 * $per:当前百分比
 * $rem:剩余值
+
+**auto_theme**:是否自动设置主题
