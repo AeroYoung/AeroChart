@@ -27,6 +27,7 @@ $('.aero-bar').progressbar({
     display_text:'center'
 });
 ```
+
 **text_format**:使用通配符替换：
 * $now: 当前值
 * $max,$min:最大最小值
